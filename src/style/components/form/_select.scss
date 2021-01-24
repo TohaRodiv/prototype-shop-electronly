@@ -1,0 +1,7 @@
+.select {
+	padding: .2rem 1rem;
+	outline: none;
+	border: 1px solid color("dark");
+
+	@include transition("default");
+}

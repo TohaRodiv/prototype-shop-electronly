@@ -1,0 +1,38 @@
+/**
+*@param $map - map props
+*@param $id - key prop in map
+*@param $fallback fallback value
+*@return value from $map or fallback
+*/
+@function _abstract-props($map, $id, $fallback)
+{
+    @if true == map-has-key($map, $id) {
+        @return map-get($map, $id);
+    }
+    @else {
+        @return $fallback;
+    }
+}
+
+
+
+
+@function color($id)
+{
+    @return _abstract-props($colors, $id, #F00);
+}
+
+@function z-index($id)
+{
+    @return _abstract-props($z-indexes, $id, 1);
+}
+
+@function font-family($id)
+{
+    @return _abstract-props($fonts, $id, sans-serif);
+}
+
+@function transition($id)
+{
+    @return _abstract-props($transitions, $id, 350ms);
+}

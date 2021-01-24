@@ -1,0 +1,5 @@
+[
+	{"title": "Каталог", "path": "/catalog"},
+	{"title": "О нас", "path": "/about"},
+	{"title": "Контакты", "path": "/contacts"}
+]

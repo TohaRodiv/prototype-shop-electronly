@@ -1,0 +1,25 @@
+.product-filter {
+	background-color: change-color($color: color("light"), $lightness: 95%);
+	color: color("dark");
+
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		padding: .5rem 1rem;
+	}
+
+	&__type-grid-filter {
+		.radio-icon__icon {
+			color: color("dark");
+		}
+	}
+
+	&__select {
+		border-color: color("dark")
+	}
+}
+
+
+@import "./grid-type-filter";

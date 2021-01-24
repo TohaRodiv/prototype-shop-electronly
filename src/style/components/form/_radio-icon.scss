@@ -1,0 +1,16 @@
+.radio-icon {
+
+	&__field {
+		display: none;
+	}
+
+	&__icon {
+		@include transition("default");
+		padding: .5rem;
+	}
+
+	&__field:checked + &__icon {
+		color: color("accent");
+		@include transition("default");
+	}
+}

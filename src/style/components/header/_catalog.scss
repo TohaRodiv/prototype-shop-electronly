@@ -1,0 +1,24 @@
+.catalog-header {
+	//
+}
+
+.catalog-menu {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {}
+
+	&__link {
+		display: inline-block;
+
+		padding: .65em 1em;
+
+		color: color("light");
+		@include transition ("default");
+		
+		&:hover, &:focus {
+			color: color("accent");
+			@include transition ("default");
+		}
+	}
+}

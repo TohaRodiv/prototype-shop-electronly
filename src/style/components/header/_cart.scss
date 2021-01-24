@@ -1,0 +1,30 @@
+.cart-header {
+
+	&__button {
+		position: relative;
+		background: none;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+	
+	&__count {
+		position: absolute;
+		top: -.7em;
+		right: -.2em;
+
+		color: color("accent");
+
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+	&__icon {
+		color: color("light");
+		@include transition ("default");
+		
+		@include hover-focus {
+			color: color("accent");
+		}
+	}
+}

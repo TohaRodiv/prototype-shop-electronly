@@ -1,0 +1,17 @@
+.type-grid-filter {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem;
+
+	&__label {
+		cursor: pointer;
+
+		.radio-icon__icon {
+			border-top: 2px solid transparent;
+		}
+
+		.radio-icon__field:checked + .radio-icon__icon {
+			border-color: color("accent");
+		}
+	}
+}

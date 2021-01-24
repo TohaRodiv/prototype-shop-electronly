@@ -1,0 +1,25 @@
+.logo {
+	
+	&__link {
+		display: flex;
+		align-items: center;
+	}
+
+	&__link:hover &__icon, &__link:hover &__title {
+		color: color("accent-hover");
+		@include transition ("default");
+	}
+
+	&__icon, &__title {
+		color: color("accent");
+		@include transition ("default");
+	}
+
+	&__icon {
+		margin-right: .25em;
+	}
+
+	&__title {
+		font-size: 1em;
+	}
+}

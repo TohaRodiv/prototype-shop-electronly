@@ -1,0 +1,21 @@
+@mixin transition ($id) {
+	transition: transition($id);
+}
+
+
+@mixin hover-focus ($noTransition: false) {
+	&:hover, &:focus {
+		@content;
+		@if false == $noTransition {
+			@include transition ("default");
+		}
+	}
+}
+
+
+@mixin pseudo($display: block, $position: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $position;
+  }
+  

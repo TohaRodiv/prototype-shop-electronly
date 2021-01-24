@@ -1,0 +1,12 @@
+.search-header {
+
+	&__icon {
+		cursor: pointer;
+		color: color("light");
+		@include transition ("default");
+		
+		@include hover-focus {
+			color: color("accent");
+		}
+	}
+}

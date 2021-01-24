@@ -1,0 +1,16 @@
+.typography {
+
+	@for $i from 1 to 7 {
+		&__h#{$i} {
+			font-size: (4 / #{$i}rem);
+			margin-top: (2 / #{$i}rem);
+			margin-bottom: (1 / #{$i}rem);
+		}
+	}
+
+	&__paragraph {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+}

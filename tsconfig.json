@@ -1,0 +1,73 @@
+{
+  "compilerOptions": {
+  "experimentalDecorators": true,
+  "useDefineForClassFields": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@component/*": [
+        "./src/component/*"
+      ],
+      "@lib/*": [
+        "./src/lib/*"
+      ],
+      "@layout/*": [
+        "src/layout/*"
+      ],
+      "@style/*": [
+        "./src/style/*"
+      ],
+      "@src/*": [
+        "./src/*"
+      ],
+      "@storage/*": [
+        "./src/storage/*"
+      ],
+      "@service/*": [
+        "./src/service/*"
+      ],
+      "@container/*": [
+        "./src/container/*"
+      ],
+      "@public/*": [
+        "./public/*"
+      ],
+      "@root/*": [
+        "./*"
+      ],
+      "@types/*": [
+        "./src/types/*"
+      ],
+      
+      "@MainLayout": [
+        "./src/layout/MainLayout/"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "public"
+  ],
+}
