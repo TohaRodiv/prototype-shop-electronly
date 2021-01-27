@@ -3,6 +3,7 @@ import { reaction } from "mobx";
 import { TDefaults } from "./Types";
 import { IProductFilterStorage } from "./IProductFilterStorage";
 import { AbstractStorage } from "./AbstractStorage";
+import { gridType, limit, sortBy } from "@src/config/productFilter";
 
 
 export class LocalStorage extends AbstractStorage implements IStorage, IProductFilterStorage {
@@ -28,21 +29,19 @@ export class LocalStorage extends AbstractStorage implements IStorage, IProductF
 	}
 
 	getSortBy(): string {
-		console.log (window.localStorage.getItem (this.PREFIX_SORT_BY));
 		return window.localStorage.getItem (this.PREFIX_SORT_BY);
 	}
 
 	getLimit(): number {
-		const limit = parseInt(window.localStorage.getItem (this.PREFIX_LIMIT));
-		return true === isFinite (limit) ? limit : 6; // TODO: change limit fallback value!!!
+		const limitFromStorage = parseInt(window.localStorage.getItem (this.PREFIX_LIMIT));
+		return true === isFinite (limitFromStorage) ? limitFromStorage : limit.default;
 	}
 
 	getDefaultValues(): TDefaults {
-		// TODO: change default values!!!
 		return {
-			gridType: this.getGridType () ?? "grid",
-			sortBy: this.getSortBy () ?? "popular",
-			limit: this.getLimit () ?? 6,
+			gridType: this.getGridType () ?? gridType.default,
+			sortBy: this.getSortBy () ?? sortBy.default,
+			limit: this.getLimit () ?? limit.default,
 		};
 	}
 

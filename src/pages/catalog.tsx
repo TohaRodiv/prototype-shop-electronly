@@ -4,6 +4,8 @@ import { List as ProductList } from "@component/Product/List";
 import { ProductFilter } from "@component/ProductFilter";
 import { Container } from "react-grid-system";
 import { ProductFilterContainer } from "@src/container/ProductFilter";
+import { ProductFilterStorage } from "@src/storage/ProductFilterStorage";
+import { observer } from "mobx-react";
 
 
 
@@ -26,7 +28,7 @@ const products = [
 ];
 
 
-const Catalog: React.FC = (): JSX.Element => {
+const Catalog = observer((): JSX.Element => {
 
 
 	return (
@@ -36,11 +38,11 @@ const Catalog: React.FC = (): JSX.Element => {
 			</Section>
 			<Container fluid>
 				<Section sm>
-					<ProductList products={ products } />
+					<ProductList products={ products } gridType={ ProductFilterStorage.getGridType () } />
 				</Section>
 			</Container>
 		</MainLayout>
 	);
-};
+});
 
 export default Catalog;

@@ -57,6 +57,9 @@
       
       "@MainLayout": [
         "./src/layout/MainLayout/"
+      ],
+      "@config/*": [
+        "./src/config/*"
       ]
     }
   },

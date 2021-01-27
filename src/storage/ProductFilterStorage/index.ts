@@ -1,8 +1,9 @@
 import { ProductFilterStorage as ProductFilterStorageAlias } from "./ProductFilterStorage";
 import { LocalStorage } from "./LocalStorage";
+import { gridType, limit, sortBy } from "@src/config/productFilter";
 
 
-let defaultValues = { gridType: "grid", sortBy: "popular", limit: 6};
+let defaultValues = { gridType: gridType.default, sortBy: sortBy.default, limit: limit.default};
 let storages = [];
 
 

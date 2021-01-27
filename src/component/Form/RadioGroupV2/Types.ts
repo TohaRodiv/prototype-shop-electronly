@@ -4,12 +4,7 @@ import { TProps as TPropsRadioIcon } from "@component/Form/RadioIcon/Types";
 
 
 export type TProps = TClassName & {
+	children: (RadioIcon: React.FC <TPropsRadioIcon>) => JSX.Element
 	name: string
-	items: Array <{
-		value: string
-		icon: string
-		typeIcon?: string
-	}>
 	onChange?: ChangeEventHandler
-	
 }

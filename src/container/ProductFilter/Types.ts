@@ -1,12 +1,19 @@
 import { TPropsFromContainer } from "@src/types/TPropsFromContainer";
+import { ChangeEventHandler } from "react";
 
 
 export type TProps = {
 	component: React.FC<TPropsFromContainer>
 }
 
-export type TState = {
+export type TDefaultStates = {
 	gridType: string
 	sortBy: string
 	limit: number
+}
+
+export type THandlers = {
+	handleChangeGridType: ChangeEventHandler
+	handleChangeSortBy: ChangeEventHandler
+	handleChangeLimit: ChangeEventHandler
 }

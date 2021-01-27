@@ -1,29 +1,20 @@
 import { TProps } from "./Types";
 import classNames from "classnames";
-import React from "react";
-import { RadioIcon } from "../RadioIcon";
+import React, { FC } from "react";
+import { RadioIcon, TProps as TPropsRadioIcon } from "../RadioIcon";
 
 
-export const RadioGroup: React.FC <TProps> = ({ className, name, items, onChange }: TProps): JSX.Element => {
+export const RadioGroup: FC <TProps> = ({ className, name, onChange, children }: TProps): JSX.Element => {
 
+	const RadioIconInput: FC <TPropsRadioIcon> = ({ ...attrs }: TPropsRadioIcon): JSX.Element => {
+		return <RadioIcon name={ name } onChange={ onChange } { ...attrs } />;
+	};
 
 	const classes = classNames ("radio-group", className);
 
 	return (
-		<ul className={ classes }>
-			{
-				items.map ( (item, index) => (
-					<li key={ `_${item.value}_${index}_` } className="radio-group__item">
-						<RadioIcon
-							icon={ item.icon }
-							typeIcon={ item.typeIcon }
-							name={ name }
-							value={ item.value }
-							onChange={ onChange }
-							className="radio-group__component" />
-					</li>
-				))
-			}
-		</ul>
+		<div className={ classes }>
+			{ children (RadioIconInput) }
+		</div>
 	);
 };
