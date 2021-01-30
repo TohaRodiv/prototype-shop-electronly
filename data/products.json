@@ -1,0 +1,122 @@
+{
+	"jsonapi": {
+		"version": "1.0"
+	},
+
+	"meta": {
+		"copyright": "List products",
+		"count_products": 10
+	},
+
+	"data": [
+		{
+			"type": "product",
+			"id": 1,
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/iphones.jpg",
+				"title": "Iphones",
+				"price": 1000
+			}
+		},
+	
+		{
+			"type": "product",
+			"id": 2, 
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/photos.jpg",
+				"title": "Photos",
+				"price": 3798
+			}
+		},
+		
+		{
+			"type": "product",
+			"id": 3,
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/tv.jpg",
+				"title": "4K TV",
+				"price": 9845
+			}
+		},
+
+		{
+			"type": "product",
+			"id": 4,
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/iphones.jpg",
+				"title": "Iphone X",
+				"price": 100000
+			}
+		},
+
+		{
+			"type": "product",
+			"id": 5,
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/tv.jpg",
+				"title": "8K TV",
+				"price": 102340
+			}
+		},
+
+		{
+			"type": "product",
+			"id": 6, 
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/photos.jpg",
+				"title": "Photos",
+				"price": 378
+			}
+		},
+
+		{
+			"type": "product",
+			"id": 7,
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/iphones.jpg",
+				"title": "Iphone 12",
+				"price": 1000000
+			}
+		},
+
+		{
+			"type": "product",
+			"id": 8,
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/tv.jpg",
+				"title": "12K TV",
+				"price": 23994293
+			}
+		},
+
+		{
+			"type": "product",
+			"id": 9, 
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/photos.jpg",
+				"title": "Photos",
+				"price": 18
+			}
+		},
+
+		{
+			"type": "product",
+			"id": 10,
+			"attributes": {
+				"path": "/",
+				"image": "/images/categories/tv.jpg",
+				"title": "Smart TV ultraHD",
+				"price": 97843
+			}
+		}
+	]
+}

@@ -1,5 +1,6 @@
 import { MainLayout } from "@layout/MainLayout";
 
+
 const Contacts: React.FC = (): JSX.Element => (
 	<MainLayout title="О нас">
 		<h2>Contacts page</h2>

@@ -8,7 +8,6 @@ import { ProductFilterStorage } from "@src/storage/ProductFilterStorage";
 import { observer } from "mobx-react";
 
 
-
 const products = [
 	{id: 1, path: "/", image: "/images/categories/iphones.jpg", title: "Iphones", price: 1000},
 	{id: 2, path: "/", image: "/images/categories/photos.jpg", title: "Photos", price: 1000},
