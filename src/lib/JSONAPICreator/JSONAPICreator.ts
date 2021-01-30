@@ -1,0 +1,6 @@
+/**
+ * JSONAPICreator
+ */
+export class JSONAPICreator {
+
+}
