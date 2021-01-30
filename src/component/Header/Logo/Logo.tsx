@@ -1,7 +1,7 @@
 import { Link } from "@component/Link/index";
 import classNames from "classnames";
 import { Icon } from "@component/Icon";
-import { TProps } from "./Type";
+import { TProps } from "./Types";
 
 
 export const Logo: React.FC <TProps> = ({ className }: TProps) => {

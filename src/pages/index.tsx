@@ -44,7 +44,7 @@ const Home: React.FC = (): JSX.Element => (
 				<CategoryList categories={cats} />
 			</Section>
 			<Section sm>
-				<ProductList products={ products } />
+				<ProductList gridType="grid" products={ products } />
 			</Section>
 			<Section sm>
 				<Typography variant="h2">О нас</Typography>

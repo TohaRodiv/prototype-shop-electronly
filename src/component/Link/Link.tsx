@@ -1,5 +1,5 @@
 import LinkNext from "next/link";
-import { TProps } from "./Type";
+import { TProps } from "./Types";
 
 export const Link: React.FC <TProps> = ({ children, className, ...args }: TProps): JSX.Element => (
 
