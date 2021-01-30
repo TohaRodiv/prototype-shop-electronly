@@ -33,6 +33,7 @@ export class ProductFilterContainer extends Component <TProps, TDefaultStates> {
 	 */
 	handleChangeSortBy = (e: ChangeEvent<HTMLSelectElement>): void => {
 		ProductFilterStorage.setSortBy (e.currentTarget.value);
+		// this.props.setProducts ([]);
 	};
 
 	/**

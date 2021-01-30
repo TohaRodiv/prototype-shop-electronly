@@ -6,6 +6,8 @@ import { Container } from "react-grid-system";
 import { ProductFilterContainer } from "@src/container/ProductFilter";
 import { ProductFilterStorage } from "@src/storage/ProductFilterStorage";
 import { observer } from "mobx-react";
+import { NextPage } from "next";
+import { useState } from "react";
 
 
 const products = [
@@ -27,13 +29,32 @@ const products = [
 ];
 
 
-const Catalog = observer((): JSX.Element => {
+type TProduct = {
+	type: string
+	id: number
+	attrtibutes: {
+		path: string
+		image: string
+		title: string
+		price: number
+	}
+}
 
+type TProps = {
+	products: Array <TProduct>
+}
+
+type TState = [ TProduct[], CallableFunction]
+
+
+const Catalog: NextPage <TProps> = observer(({ products: productsFromServer, }: TProps): JSX.Element => {
+
+	const [ products, setProducts ]: TState = useState (productsFromServer);
 
 	return (
 		<MainLayout title="Каталог товаров" noContainer noPaddingTop>
 			<Section>
-				<ProductFilterContainer component={ ProductFilter } />
+				<ProductFilterContainer component={ ProductFilter } setProducts={ setProducts } />
 			</Section>
 			<Container fluid>
 				<Section sm>
@@ -43,5 +64,28 @@ const Catalog = observer((): JSX.Element => {
 		</MainLayout>
 	);
 });
+
+
+Catalog.getInitialProps = async (ctx) => {
+
+	const API_URL = "http://localhost:3000/api/products";
+
+	const respone = await fetch (API_URL, { 
+		
+		method: "POST",
+		body: JSON.stringify ({}),
+		headers: {
+			"Content-Type": "application/json;charset=utf-8"
+		}
+
+	});
+
+	const result = await respone.json ();
+	
+	return {
+		products: result.data,
+	};
+};
+
 
 export default Catalog;

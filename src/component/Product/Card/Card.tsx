@@ -6,7 +6,11 @@ import { CartStorage } from "@src/storage/CartStorage";
 export const Card: React.FC <TProps> = ({ className, item }: TProps): JSX.Element => {
 
 	const classes = classNames ("product-card", className);
-	const { title, image, path, price } = item;
+
+	/**
+	 * TODO: change only item.attributes
+	 */
+	const { title, image, path, price } = item.attributes || item;
 
 	const addToCart = () => {
 		CartStorage.addProduct ({ id: CartStorage.getAmount() + 1 });

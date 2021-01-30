@@ -60,7 +60,10 @@
       ],
       "@config/*": [
         "./src/config/*"
-      ]
+	  ],
+	  "@component-page/*": [
+		  "./src/component-page/*"
+	  ]
     }
   },
   "include": [
